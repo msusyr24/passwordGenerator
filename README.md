@@ -8,7 +8,7 @@ Project Description: A password generator that produces a password 8-128 charact
 
 Screenshot showing the output of a user requesting a 20-character password with all four of the above categories included.
 
-<img src="image.png">
+<img src="https://github.com/msusyr24/passwordGenerator/blob/7b602d6eba713056af4877b27c7d13fe6b9f16ac/pwgenerator.png">
 
 Console logged on the right are:
 Number of characters
