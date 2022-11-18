@@ -25,7 +25,9 @@ generatePassword = function(){
 var generatePasswordPrompt = window.prompt("How many characters for your password (min 8)?")
 var generatePasswordPrompt = parseInt(generatePasswordPrompt)
 console.log(generatePasswordPrompt);
-if (generatePasswordPrompt < 8){
+if (!generatePasswordPrompt){
+  return;
+} else if(generatePasswordPrompt < 8){
   alert("Must be a number between 8 and 128");
   return;
 }
