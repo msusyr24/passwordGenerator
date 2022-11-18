@@ -5,9 +5,8 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-  
+  write(storage)
 }
 
 // Add event listener to generate button
@@ -85,6 +84,8 @@ for (let i = 0; i < generatePasswordPrompt; i++) {
     
     }
 
+    navigator.clipboard.writeText(Storage);    
 return Storage;
+
 }
 
