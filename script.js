@@ -6,7 +6,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-  write(storage)
+  navigator.clipboard.writeText(password);    
 }
 
 // Add event listener to generate button
@@ -34,7 +34,7 @@ if (!generatePasswordPrompt){
     alert("Must be a number between 8 and 128");
     return;
 } 
-  else if(isNaN(generatePasswordPrompt)===true){
+  else if(isNaN(generatePasswordPrompt)){
   alert("Must be a number between 8 and 128");
   return;
 } else{
@@ -75,17 +75,16 @@ if (numberQuestion == true) {
 console.log(userChoice)
 // ^^This console.log is put here to see if the value of userChoice is correct within the console.
 
-var Storage = [];
+var finalPass = [];
 
 for (let i = 0; i < generatePasswordPrompt; i++) {
       random = Math.floor(Math.random() * (userChoice.length));
-      Storage = Storage + userChoice[random];
+      finalPass = finalPass + userChoice[random];
       console.log(userChoice[random])
     
     }
 
-    navigator.clipboard.writeText(Storage);    
-return Storage;
+return finalPass;
 
 }
 
