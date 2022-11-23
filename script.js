@@ -6,7 +6,6 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-  navigator.clipboard.writeText(password);    
 }
 
 // Add event listener to generate button
@@ -51,7 +50,7 @@ console.log(numberQuestion)
 // ^^these were put here to see if the questions come back correctly with true/false
 
 if(lowerQuestion===false && upperQuestion ===false && specialQuestion ===false && numberQuestion===false){
-  alert("Password requires at least one of the groups to be used. Please try again.")
+  alert("Password requires at least one of the groups to be used. Please try again.");
   return;
 }
 
